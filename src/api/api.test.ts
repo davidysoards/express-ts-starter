@@ -4,22 +4,16 @@ import app from '../app';
 
 describe('GET /api/v1', () => {
   it('responds with a json message', (done) => {
-    request(app).get('/api/v1').set('Accept', 'application/json').expect('Content-Type', /json/).expect(
-      200,
-      {
-        message: '👋 🌎',
-      },
-      done,
-    );
-  });
-});
-
-describe('GET /api/v1/emojis', () => {
-  it('responds with a json message', (done) => {
     request(app)
-      .get('/api/v1/emojis')
+      .get('/api/v1')
       .set('Accept', 'application/json')
       .expect('Content-Type', /json/)
-      .expect(200, ['😀', '😳', '🙄'], done);
+      .expect(
+        200,
+        {
+          message: '👋 🌎',
+        },
+        done,
+      );
   });
 });
