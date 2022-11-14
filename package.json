@@ -4,7 +4,6 @@
   "description": "A basic starter Express API with Typescript and Jest",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node src/index.ts",
     "dev": "tsnd --respawn --pretty --transpile-only src/index.ts",
     "build": "tsc",
     "lint": "eslint --fix src test",
